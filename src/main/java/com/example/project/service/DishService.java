@@ -10,7 +10,7 @@ public interface DishService {
 
     DishDTO getDishById(Long id);
 
-    DishDTO createDish(Dish dish);
+    DishDTO createDish(DishDTO dishDto);
 
     void deleteDish(Long id);
 }
