@@ -28,5 +28,5 @@ public class DishDTO {
     private Double price;
 
     @NotNull
-    private Restaurant restaurant;
+    private RestaurantDTO restaurant;
 }
