@@ -31,9 +31,9 @@ public class UserServiceJPA implements UserService {
     }
 
     @Override
-    public UserDTO createUser(User user) {
-        user = userRepository.save(user);
-        return userMapper.userToUserDto(user);
+    public UserDTO createUser(UserDTO userDto) {
+        userDto = userMapper.userToUserDto(userRepository.save(userMapper.userDtoToUser(userDto)));
+        return userDto;
     }
 
     @Override
