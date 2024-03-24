@@ -26,7 +26,7 @@ public class OrderDTO {
     private LocalDateTime orderTime;
 
     @NotNull
-    private List<Dish> dishes;
+    private List<DishDTO> dishes;
 
     @NotNull
     private double totalCost;
