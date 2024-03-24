@@ -27,5 +27,5 @@ public class RestaurantDTO {
     private String address;
 
     @NotNull
-    private List<Dish> menu;
+    private List<DishDTO> menu;
 }
