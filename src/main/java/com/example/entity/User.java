@@ -16,12 +16,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    private String firstName;
 
-    private String email;
+    private String lastName;
 
     private String password;
 
-    private String address;
+    private String phoneNumber;
 
 }
