@@ -31,9 +31,9 @@ public class DishServiceJPA implements DishService {
     }
 
     @Override
-    public DishDTO createDish(Dish dish) {
-        dish = dishRepository.save(dish);
-        return dishMapper.dishToDishDto(dish);
+    public DishDTO createDish(DishDTO dishDto) {
+        dishDto = dishMapper.dishToDishDto(dishRepository.save(dishMapper.dishDtoToDish(dishDto)));
+        return dishDto;
     }
 
     @Override
