@@ -31,9 +31,9 @@ public class OrderServiceJPA implements OrderService {
     }
 
     @Override
-    public OrderDTO createOrder(Order order) {
-        order = orderRepository.save(order);
-        return orderMapper.orderToOrderDto(order);
+    public OrderDTO createOrder(OrderDTO orderDto) {
+        orderDto = orderMapper.orderToOrderDto(orderRepository.save(orderMapper.orderDtoToOrder(orderDto)));
+        return orderDto;
     }
 
     @Override
