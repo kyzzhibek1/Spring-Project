@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.NotBlank;
 
+import java.util.List;
+
 @Builder
 @Data
 @NoArgsConstructor
@@ -25,4 +27,6 @@ public class UserDTO {
     @NotNull
     @NotBlank
     private String phoneNumber;
+
+    private List<OrderDTO> orders;
 }
