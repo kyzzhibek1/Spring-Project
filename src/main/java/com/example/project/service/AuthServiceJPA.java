@@ -41,7 +41,7 @@ public class AuthServiceJPA implements  AuthService {
 
     @Override
     public void register(AuthRegisterDTO authRegisterDTO) {
-        if (!authRegisterDTO.getPassword().equals(authRegisterDTO.getConfirm_password())) {
+        if (!authRegisterDTO.getPassword().equals(authRegisterDTO.getConfirmPassword())) {
             throw new InvalidDataException("Passwords does not match");
         }
 
